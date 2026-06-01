@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 const navLinks = [
 	{ href: '/terms', label: 'Términos' },
 	{ href: '/privacy', label: 'Privacidad' },
@@ -15,7 +17,10 @@ const navLinks = [
 			{navLinks.map(link => (
 				<a href={link.href} class="nav-link">{link.label}</a>
 			))}
-			<a href="#download" class="nav-cta">↓ Descargar</a>
+			<a href="#download" class="nav-cta">
+				<Icon name="download" size={16} />
+				<span>Descargar</span>
+			</a>
 		</div>
 	</div>
 </nav>
@@ -82,11 +87,18 @@ const navLinks = [
 	.nav-cta {
 		background: var(--accent-green);
 		color: var(--bg-primary);
-		padding: 0.5rem 1.25rem;
+		padding: 0.5rem 1rem;
 		font-size: 0.85rem;
 		font-weight: 700;
 		border-radius: 4px;
 		transition: all 0.2s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.nav-cta :global(svg) {
+		flex-shrink: 0;
 	}
 
 	.nav-cta:hover {

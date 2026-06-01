@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <section class="cta-section" id="download">
@@ -28,7 +29,7 @@
 			</div>
 			<div class="cta-action">
 				<a href="#" class="download-btn">
-					<span class="btn-icon">↓</span>
+					<Icon name="download" size={22} class="btn-icon" />
 					<span class="btn-text">Descargar APK</span>
 				</a>
 				<span class="btn-note">Requiere Android 11 o superior</span>
@@ -132,7 +133,7 @@
 	}
 
 	.btn-icon {
-		font-size: 1.4rem;
+		display: inline-flex;
 	}
 
 	.btn-note {

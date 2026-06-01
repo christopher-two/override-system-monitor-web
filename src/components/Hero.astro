@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <section class="hero">
@@ -14,7 +15,7 @@
 				<p class="terminal-line">
 					<span class="prompt">$</span>
 					<span class="command">./override-monitor</span>
-					<span class="cursor">█</span>
+					<Icon name="cursor" size={18} class="cursor" />
 				</p>
 				<p class="terminal-output">
 					<span class="output-bracket">[</span>
@@ -27,13 +28,14 @@
 					<span class="tagline-text">Monitor de sistema en tiempo real para Android</span>
 				</p>
 				<p class="terminal-status">
-					<span class="status-ok">●</span> Sistema activo
+					<Icon name="status-dot" size={12} class="status-ok" />
+					<span> Sistema activo</span>
 				</p>
 			</div>
 		</div>
 		<div class="hero-cta">
 			<a href="#download" class="cta-button">
-				<span class="cta-icon">↓</span>
+				<Icon name="download" size={20} class="cta-icon" />
 				<span>Descargar APK</span>
 			</a>
 			<span class="cta-info">v1.0 • 8.2 MB • Android 11+</span>
@@ -115,6 +117,7 @@
 	.cursor {
 		color: var(--accent-green);
 		animation: blink 1s infinite;
+		display: inline-flex;
 	}
 
 	.terminal-output {
@@ -160,6 +163,10 @@
 		margin-right: 0.5rem;
 	}
 
+	.terminal-status span {
+		vertical-align: middle;
+	}
+
 	.hero-cta {
 		display: flex;
 		flex-direction: column;
@@ -188,7 +195,7 @@
 	}
 
 	.cta-icon {
-		font-size: 1.3rem;
+		display: inline-flex;
 	}
 
 	.cta-info {

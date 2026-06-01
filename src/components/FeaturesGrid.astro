@@ -1,38 +1,40 @@
 ---
+import Icon from './Icon.astro';
+
 const features = [
 	{
 		title: 'Battery',
-		icon: '⚡',
+		icon: 'battery',
 		desc: 'Estado, temperatura, voltaje y salud de la batería en tiempo real',
 		color: 'green'
 	},
 	{
 		title: 'Memory',
-		icon: '▦',
+		icon: 'memory',
 		desc: 'Monitoreo de RAM usada, disponible y porcentaje de uso',
 		color: 'cyan'
 	},
 	{
 		title: 'Storage',
-		icon: '▣',
+		icon: 'storage',
 		desc: 'Análisis de almacenamiento interno y externo con detalle',
 		color: 'orange'
 	},
 	{
 		title: 'Sensors',
-		icon: '◉',
+		icon: 'sensors',
 		desc: 'Sensores activos: acelerómetro, giroscopio, magnetómetro y más',
 		color: 'green'
 	},
 	{
 		title: 'Network',
-		icon: '⛊',
+		icon: 'network',
 		desc: 'Conectividad WiFi y celular, velocidad de transferencia',
 		color: 'cyan'
 	},
 	{
 		title: 'Device',
-		icon: '⌘',
+		icon: 'device',
 		desc: 'Información del dispositivo, versión de OS y uptime',
 		color: 'green'
 	},
@@ -47,13 +49,15 @@ const features = [
 	<div class="features-grid">
 		{features.map((feature, index) => (
 			<div class="feature-card" style={`--delay: ${index * 0.1}s`} data-color={feature.color}>
-				<div class="feature-icon">{feature.icon}</div>
+				<div class="feature-icon">
+					<Icon name={feature.icon} size={32} />
+				</div>
 				<div class="feature-content">
 					<h3 class="feature-title">{feature.title}</h3>
 					<p class="feature-desc">{feature.desc}</p>
 				</div>
 				<div class="feature-status">
-					<span class="status-dot"></span>
+					<Icon name="status-dot" size={8} class="status-dot" />
 					<span>online</span>
 				</div>
 			</div>
@@ -136,8 +140,12 @@ const features = [
 	}
 
 	.feature-icon {
-		font-size: 2rem;
 		color: var(--accent-green);
+	}
+
+	.feature-icon :global(svg) {
+		width: 32px;
+		height: 32px;
 	}
 
 	.feature-card[data-color="cyan"] .feature-icon {
@@ -174,11 +182,13 @@ const features = [
 	}
 
 	.status-dot {
+		color: var(--accent-green);
+		animation: pulse 2s infinite;
+	}
+
+	.status-dot :global(svg) {
 		width: 8px;
 		height: 8px;
-		background: var(--accent-green);
-		border-radius: 50%;
-		animation: pulse 2s infinite;
 	}
 
 	@keyframes pulse {
