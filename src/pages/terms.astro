@@ -1,15 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import DocLayout from '../components/DocLayout.astro';
 
 const docs = await getCollection('docs');
-const termsEntry = docs.find(entry => entry.id === 'terms.md');
+const termsEntry = docs.find(entry => entry.id === 'terms' || entry.id === 'terms.md');
 
 if (!termsEntry) {
 	return Astro.redirect('/404');
 }
 
-const { Content } = await termsEntry.render();
+const { Content } = await render(termsEntry);
 const { title, lastUpdated, description } = termsEntry.data;
 ---
 
