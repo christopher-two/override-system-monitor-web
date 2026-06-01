@@ -1,10 +1,11 @@
 ---
 import Icon from './Icon.astro';
 
-const navLinks = [
-	{ href: '/terms', label: 'Términos' },
-	{ href: '/privacy', label: 'Privacidad' },
-];
+	const navLinks = [
+		{ href: '/terms', label: 'Términos' },
+		{ href: '/privacy', label: 'Privacidad' },
+		{ href: 'https://www.override.com.mx/landing/#contact', label: 'Contacto', external: true },
+	];
 ---
 
 <nav class="navbar">
@@ -15,7 +16,12 @@ const navLinks = [
 		</a>
 		<div class="nav-links">
 			{navLinks.map(link => (
-				<a href={link.href} class="nav-link">{link.label}</a>
+				<a
+					href={link.href}
+					class="nav-link"
+					target={link.external ? '_blank' : undefined}
+					rel={link.external ? 'noopener noreferrer' : undefined}
+				>{link.label}</a>
 			))}
 			<a href="#download" class="nav-cta">
 				<Icon name="download" size={16} />

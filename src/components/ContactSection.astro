@@ -1,0 +1,95 @@
+---
+---
+
+<section class="contact">
+	<div class="contact-content">
+		<div class="contact-header">
+			<span class="contact-prefix">&gt;</span>
+			<span class="contact-title">CONTACTO</span>
+		</div>
+		<div class="contact-box">
+			<p class="contact-desc">¿Tienes preguntas o necesitas ayuda?</p>
+			<a href="https://www.override.com.mx/landing/#contact" target="_blank" rel="noopener noreferrer" class="contact-btn">
+				<span>Ir a Contacto</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+			</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.contact {
+		padding: 4rem 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.contact-header {
+		margin-bottom: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.contact-prefix {
+		color: var(--accent-cyan);
+		font-weight: 700;
+	}
+
+	.contact-title {
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		letter-spacing: 0.15em;
+	}
+
+	.contact-box {
+		background: var(--bg-surface);
+		border: 1px solid var(--border-subtle);
+		border-radius: 8px;
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	.contact-desc {
+		color: var(--text-secondary);
+		font-size: 1rem;
+	}
+
+	.contact-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: transparent;
+		color: var(--accent-green);
+		padding: 0.75rem 1.5rem;
+		font-size: 0.95rem;
+		font-weight: 700;
+		border: 1px solid var(--accent-green);
+		border-radius: 6px;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.contact-btn:hover {
+		background: var(--accent-green);
+		color: var(--bg-primary);
+	}
+
+	.contact-btn svg {
+		transition: transform 0.3s ease;
+	}
+
+	.contact-btn:hover svg {
+		transform: translate(2px, -2px);
+	}
+
+	@media (max-width: 768px) {
+		.contact-box {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>
