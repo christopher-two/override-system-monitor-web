@@ -1,23 +1,130 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+
+		<meta name="theme-color" content="#0A0A0F" />
+		<meta name="color-scheme" content="dark" />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="canonical" href="https://monitor.override.com.mx" />
+
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+		<meta property="og:site_name" content="Override System Monitor" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://monitor.override.com.mx" />
+		<meta property="og:image" content="/og-image.svg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="es_MX" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@override" />
+		<meta name="twitter:creator" content="@override" />
+		<meta name="twitter:image" content="/og-image.svg" />
+
+		<meta name="google-site-verification" content="" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+		<slot name="head" />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	:root {
+		--bg-primary: #0A0A0F;
+		--bg-surface: #12121A;
+		--bg-surface-hover: #1A1A24;
+		--accent-green: #00FF04;
+		--accent-cyan: #00D9FF;
+		--accent-orange: #FF6B35;
+		--text-primary: #E0E0E0;
+		--text-secondary: #808080;
+		--border-subtle: rgba(0, 255, 4, 0.15);
+		--font-mono: 'JetBrains Mono', monospace;
+	}
+
+	* {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-mono);
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
+		line-height: 1.6;
+		min-height: 100vh;
+	}
+
+	@keyframes blink {
+		0%, 50% { opacity: 1; }
+		51%, 100% { opacity: 0; }
+	}
+
+	@keyframes typing {
+		from { width: 0; }
+		to { width: 100%; }
+	}
+
+	@keyframes glitch {
+		0% { transform: translate(0); }
+		20% { transform: translate(-2px, 2px); }
+		40% { transform: translate(-2px, -2px); }
+		60% { transform: translate(2px, 2px); }
+		80% { transform: translate(2px, -2px); }
+		100% { transform: translate(0); }
+	}
+
+	@keyframes scanline {
+		0% { transform: translateY(-100%); }
+		100% { transform: translateY(100vh); }
+	}
+
+	@keyframes pulse-glow {
+		0%, 100% { box-shadow: 0 0 5px var(--accent-green), 0 0 10px rgba(0, 255, 4, 0.3); }
+		50% { box-shadow: 0 0 20px var(--accent-green), 0 0 30px rgba(0, 255, 4, 0.5); }
+	}
+
+	a {
+		color: var(--accent-cyan);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	a:hover {
+		color: var(--accent-green);
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--bg-primary);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--accent-green);
+		border-radius: 4px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--accent-cyan);
 	}
 </style>

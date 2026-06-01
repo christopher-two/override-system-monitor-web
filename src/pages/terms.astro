@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<Fragment slot="head">
+		<title>Términos de Uso | Override System Monitor</title>
+		<meta name="description" content="Términos y condiciones de uso de Override System Monitor para Android. Lee nuestras políticas antes de descargar la aplicación." />
+		<meta name="robots" content="noindex, follow" />
+
+		<meta property="og:title" content="Términos de Uso | Override System Monitor" />
+		<meta property="og:description" content="Términos y condiciones de uso de Override System Monitor para Android." />
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:title" content="Términos de Uso - Override System Monitor" />
+		<meta name="twitter:description" content="Términos y condiciones de uso de Override System Monitor." />
+	</Fragment>
+	<Navbar />
+	<main class="legal-page">
+		<div class="legal-header">
+			<span class="legal-prefix">&gt;</span>
+			<h1 class="legal-title">TÉRMINOS DE USO</h1>
+		</div>
+		<div class="legal-meta">
+			<span class="meta-label">ÚLTIMA ACTUALIZACIÓN:</span>
+			<span class="meta-value">31 de Mayo de 2026</span>
+		</div>
+
+		<div class="legal-content">
+			<section class="legal-section">
+				<h2>1. Aceptación de los Términos</h2>
+				<p>Al descargar, instalar o utilizar Override System Monitor ("la Aplicación"), aceptas estar sujeto a estos Términos de Uso. Si no aceptas estos términos, no debes usar la Aplicación.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>2. Descripción de la Aplicación</h2>
+				<p>Override System Monitor es una aplicación de monitoreo de sistema para dispositivos Android que proporciona información en tiempo real sobre batería, memoria RAM, almacenamiento, sensores, conectividad de red e información del dispositivo.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>3. Permisos y Datos</h2>
+				<p>La Aplicación requiere los siguientes permisos:</p>
+				<ul>
+					<li><strong>INTERNET y ACCESS_NETWORK_STATE:</strong> Para verificar conectividad de red</li>
+					<li><strong>ACCESS_WIFI_STATE:</strong> Para obtener información de la conexión WiFi</li>
+					<li><strong>ACCESS_COARSE_LOCATION y ACCESS_FINE_LOCATION:</strong> Para identificar redes WiFi cercanas</li>
+					<li><strong>READ_PHONE_STATE:</strong> Para obtener información del dispositivo</li>
+					<li><strong>ACTIVITY_RECOGNITION:</strong> Para monitorear sensores de actividad</li>
+				</ul>
+				<p>Los datos recopilados se utilizan únicamente para proporcionar las funciones de monitoreo de la aplicación y no se comparten con terceros.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>4. Uso Adecuado</h2>
+				<p>Te comprometes a utilizar la Aplicación únicamente para fines legales y de acuerdo con estos términos. No debes:</p>
+				<ul>
+					<li>Modificar, descompilar o realizar ingeniería inversa de la Aplicación</li>
+					<li>Utilizar la Aplicación para fines maliciosos o ilegal</li>
+					<li>Intentar acceder a sistemas no autorizados a través de la Aplicación</li>
+				</ul>
+			</section>
+
+			<section class="legal-section">
+				<h2>5. Propiedad Intelectual</h2>
+				<p>Override System Monitor y todos los contenidos, diseño, código y materiales relacionados son propiedad del desarrollador. Todos los derechos reservados. No se te otorga ninguna licencia más allá del uso personal no comercial.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>6. Limitación de Responsabilidad</h2>
+				<p>LA APLICACIÓN SE PROPORCIONA "TAL CUAL" Y "SEGÚN DISPONIBILIDAD". EL DESARROLLADOR NO GARANTIZA QUE LA APLICACIÓN ESTÉ LIBRE DE ERRORES O QUE FUNCIONE SIN INTERRUPCIONES. EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY, EL DESARROLLADOR NO SERÁ RESPONSABLE POR NINGÚN DAÑO DIRECTO, INDIRECTO, INCIDENTAL O CONSECUENCIAL.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>7. Modificaciones</h2>
+				<p>El desarrollador se reserva el derecho de modificar estos términos en cualquier momento. Los cambios importantes serán comunicados a través de la aplicación o mediante una actualización de esta página. El uso continuado de la Aplicación después de los cambios constituye la aceptación de los nuevos términos.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>8. Ley Aplicable</h2>
+				<p>Estos términos se rigen por las leyes del país donde opera el desarrollador. Cualquier disputa relacionada con estos términos será resuelta en los tribunales competentes de esa jurisdicción.</p>
+			</section>
+
+			<section class="legal-section">
+				<h2>9. Contacto</h2>
+				<p>Si tienes alguna pregunta sobre estos Términos de Uso, puedes contactar al desarrollador a través de la aplicación o mediante los canales de soporte disponibles.</p>
+			</section>
+		</div>
+
+		<div class="legal-footer">
+			<a href="/" class="back-link">← Volver al inicio</a>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.legal-page {
+		padding: 8rem 2rem 4rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.legal-header {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.legal-prefix {
+		color: var(--accent-cyan);
+		font-weight: 700;
+	}
+
+	.legal-title {
+		color: var(--accent-green);
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+	}
+
+	.legal-meta {
+		padding: 1rem 0;
+		border-bottom: 1px solid var(--border-subtle);
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.meta-label {
+		color: var(--text-secondary);
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+	}
+
+	.meta-value {
+		color: var(--accent-cyan);
+		font-size: 0.9rem;
+	}
+
+	.legal-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.legal-section h2 {
+		color: var(--text-primary);
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin-bottom: 0.75rem;
+		padding-left: 1rem;
+		border-left: 2px solid var(--accent-green);
+	}
+
+	.legal-section p {
+		color: var(--text-secondary);
+		line-height: 1.7;
+	}
+
+	.legal-section ul {
+		color: var(--text-secondary);
+		list-style: none;
+		padding-left: 1rem;
+	}
+
+	.legal-section ul li {
+		margin-bottom: 0.5rem;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.legal-section ul li::before {
+		content: '>';
+		position: absolute;
+		left: 0;
+		color: var(--accent-green);
+	}
+
+	.legal-section ul li strong {
+		color: var(--text-primary);
+	}
+
+	.legal-footer {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--border-subtle);
+	}
+
+	.back-link {
+		color: var(--accent-cyan);
+		font-size: 0.9rem;
+	}
+
+	.back-link:hover {
+		color: var(--accent-green);
+	}
+
+	@media (max-width: 768px) {
+		.legal-page {
+			padding: 6rem 1rem 3rem;
+		}
+	}
+</style>

@@ -1,0 +1,198 @@
+---
+const features = [
+	{
+		title: 'Battery',
+		icon: '⚡',
+		desc: 'Estado, temperatura, voltaje y salud de la batería en tiempo real',
+		color: 'green'
+	},
+	{
+		title: 'Memory',
+		icon: '▦',
+		desc: 'Monitoreo de RAM usada, disponible y porcentaje de uso',
+		color: 'cyan'
+	},
+	{
+		title: 'Storage',
+		icon: '▣',
+		desc: 'Análisis de almacenamiento interno y externo con detalle',
+		color: 'orange'
+	},
+	{
+		title: 'Sensors',
+		icon: '◉',
+		desc: 'Sensores activos: acelerómetro, giroscopio, magnetómetro y más',
+		color: 'green'
+	},
+	{
+		title: 'Network',
+		icon: '⛊',
+		desc: 'Conectividad WiFi y celular, velocidad de transferencia',
+		color: 'cyan'
+	},
+	{
+		title: 'Device',
+		icon: '⌘',
+		desc: 'Información del dispositivo, versión de OS y uptime',
+		color: 'green'
+	},
+];
+---
+
+<section class="features">
+	<div class="features-header">
+		<span class="features-prefix">&gt;</span>
+		<span class="features-title">MODULOS_DISPONIBLES</span>
+	</div>
+	<div class="features-grid">
+		{features.map((feature, index) => (
+			<div class="feature-card" style={`--delay: ${index * 0.1}s`} data-color={feature.color}>
+				<div class="feature-icon">{feature.icon}</div>
+				<div class="feature-content">
+					<h3 class="feature-title">{feature.title}</h3>
+					<p class="feature-desc">{feature.desc}</p>
+				</div>
+				<div class="feature-status">
+					<span class="status-dot"></span>
+					<span>online</span>
+				</div>
+			</div>
+		))}
+	</div>
+</section>
+
+<style>
+	.features {
+		padding: 4rem 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.features-header {
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.features-prefix {
+		color: var(--accent-cyan);
+		font-weight: 700;
+	}
+
+	.features-title {
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		letter-spacing: 0.15em;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.feature-card {
+		background: var(--bg-surface);
+		border: 1px solid var(--border-subtle);
+		border-radius: 8px;
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.feature-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 3px;
+		height: 100%;
+		background: var(--accent-green);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.feature-card[data-color="cyan"]::before {
+		background: var(--accent-cyan);
+	}
+
+	.feature-card[data-color="orange"]::before {
+		background: var(--accent-orange);
+	}
+
+	.feature-card:hover {
+		border-color: var(--accent-green);
+		transform: translateY(-4px);
+		box-shadow: 0 8px 30px rgba(0, 255, 4, 0.15);
+	}
+
+	.feature-card:hover::before {
+		opacity: 1;
+	}
+
+	.feature-icon {
+		font-size: 2rem;
+		color: var(--accent-green);
+	}
+
+	.feature-card[data-color="cyan"] .feature-icon {
+		color: var(--accent-cyan);
+	}
+
+	.feature-card[data-color="orange"] .feature-icon {
+		color: var(--accent-orange);
+	}
+
+	.feature-content {
+		flex: 1;
+	}
+
+	.feature-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin-bottom: 0.5rem;
+	}
+
+	.feature-desc {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		line-height: 1.5;
+	}
+
+	.feature-status {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.8rem;
+		color: var(--accent-green);
+	}
+
+	.status-dot {
+		width: 8px;
+		height: 8px;
+		background: var(--accent-green);
+		border-radius: 50%;
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.5; }
+	}
+
+	@media (max-width: 768px) {
+		.features {
+			padding: 3rem 1rem;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

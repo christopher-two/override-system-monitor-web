@@ -1,0 +1,187 @@
+---
+---
+
+<section class="cta-section" id="download">
+	<div class="cta-content">
+		<div class="cta-header">
+			<span class="cta-prefix">&gt;</span>
+			<span class="cta-title">DESCARGAR</span>
+		</div>
+		<div class="cta-box">
+			<div class="cta-info-grid">
+				<div class="cta-info-item">
+					<span class="info-label">VERSIÓN</span>
+					<span class="info-value">1.0.0</span>
+				</div>
+				<div class="cta-info-item">
+					<span class="info-label">TAMAÑO</span>
+					<span class="info-value">8.2 MB</span>
+				</div>
+				<div class="cta-info-item">
+					<span class="info-label">ANDROID</span>
+					<span class="info-value">11+</span>
+				</div>
+				<div class="cta-info-item">
+					<span class="info-label">ARQUITECTURA</span>
+					<span class="info-value">arm64-v8a</span>
+				</div>
+			</div>
+			<div class="cta-action">
+				<a href="#" class="download-btn">
+					<span class="btn-icon">↓</span>
+					<span class="btn-text">Descargar APK</span>
+				</a>
+				<span class="btn-note">Requiere Android 11 o superior</span>
+			</div>
+		</div>
+		<div class="cta-terminal">
+			<p class="terminal-line">
+				<span class="prompt">$</span>
+				<span class="cmd">adb install override-system-monitor.apk</span>
+			</p>
+			<p class="terminal-output">Listo para monitorear tu sistema</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.cta-section {
+		padding: 4rem 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.cta-header {
+		margin-bottom: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.cta-prefix {
+		color: var(--accent-cyan);
+		font-weight: 700;
+	}
+
+	.cta-title {
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		letter-spacing: 0.15em;
+	}
+
+	.cta-box {
+		background: var(--bg-surface);
+		border: 1px solid var(--accent-green);
+		border-radius: 8px;
+		padding: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.cta-info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid var(--border-subtle);
+	}
+
+	.cta-info-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+
+	.info-label {
+		font-size: 0.75rem;
+		color: var(--text-secondary);
+		letter-spacing: 0.1em;
+	}
+
+	.info-value {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--accent-cyan);
+	}
+
+	.cta-action {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.download-btn {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: var(--accent-green);
+		color: var(--bg-primary);
+		padding: 1.25rem 3rem;
+		font-size: 1.2rem;
+		font-weight: 700;
+		border-radius: 6px;
+		transition: all 0.3s ease;
+	}
+
+	.download-btn:hover {
+		background: var(--accent-cyan);
+		color: var(--bg-primary);
+		transform: translateY(-3px);
+		box-shadow: 0 8px 40px rgba(0, 255, 4, 0.4);
+	}
+
+	.btn-icon {
+		font-size: 1.4rem;
+	}
+
+	.btn-note {
+		font-size: 0.8rem;
+		color: var(--text-secondary);
+	}
+
+	.cta-terminal {
+		background: var(--bg-surface);
+		border: 1px solid var(--border-subtle);
+		border-radius: 6px;
+		padding: 1.25rem 1.5rem;
+	}
+
+	.terminal-line {
+		margin-bottom: 0.5rem;
+	}
+
+	.prompt {
+		color: var(--accent-green);
+		margin-right: 0.75rem;
+	}
+
+	.cmd {
+		color: var(--text-primary);
+	}
+
+	.terminal-output {
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		padding-left: 1.75rem;
+	}
+
+	@media (max-width: 768px) {
+		.cta-section {
+			padding: 3rem 1rem;
+		}
+
+		.cta-box {
+			padding: 1.5rem;
+		}
+
+		.cta-info-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.download-btn {
+			padding: 1rem 2rem;
+			font-size: 1rem;
+		}
+	}
+</style>

@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import StatsGrid from '../components/StatsGrid.astro';
+import FeaturesGrid from '../components/FeaturesGrid.astro';
+import CTASection from '../components/CTASection.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Fragment slot="head">
+		<title>Override System Monitor | Monitor de sistema en tiempo real para Android</title>
+		<meta name="description" content="Monitor de batería, RAM, almacenamiento, sensores y red en tiempo real. App nativa para Android con interfaz estilo terminal. Gratis y de código abierto." />
+		<meta name="keywords" content="monitor de sistema, Android, batería, RAM, almacenamiento, sensores, monitor, override, system monitor, app android" />
+		<meta name="author" content="Override" />
+
+		<meta property="og:title" content="Override System Monitor | Monitor de sistema en tiempo real para Android" />
+		<meta property="og:description" content="Monitor de batería, RAM, almacenamiento, sensores y red en tiempo real. App nativa para Android con interfaz estilo terminal." />
+		<meta property="og:image" content="/og-image.svg" />
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:title" content="Override System Monitor" />
+		<meta name="twitter:description" content="Monitor de batería, RAM, almacenamiento, sensores y red en tiempo real para Android." />
+	</Fragment>
+	<Navbar />
+	<main>
+		<Hero />
+		<StatsGrid />
+		<FeaturesGrid />
+		<CTASection />
+	</main>
+	<Footer />
 </Layout>

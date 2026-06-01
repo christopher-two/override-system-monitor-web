@@ -1,0 +1,66 @@
+---
+interface Props {
+	title: string;
+	lastUpdated: string;
+}
+
+const { title, lastUpdated } = Astro.props;
+---
+
+<div class="legal-container">
+	<div class="legal-header">
+		<span class="legal-prefix">&gt;</span>
+		<span class="legal-title">{title.toUpperCase().replace(/\s+/g, '_')}</span>
+	</div>
+	<div class="legal-meta">
+		<span class="meta-label">ÚLTIMA ACTUALIZACIÓN:</span>
+		<span class="meta-value">{lastUpdated}</span>
+	</div>
+</div>
+
+<style>
+	.legal-container {
+		padding: 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.legal-header {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.legal-prefix {
+		color: var(--accent-cyan);
+		font-weight: 700;
+	}
+
+	.legal-title {
+		color: var(--accent-green);
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+	}
+
+	.legal-meta {
+		padding: 1rem 0;
+		border-bottom: 1px solid var(--border-subtle);
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.meta-label {
+		color: var(--text-secondary);
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+	}
+
+	.meta-value {
+		color: var(--accent-cyan);
+		font-size: 0.9rem;
+	}
+</style>
