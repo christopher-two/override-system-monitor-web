@@ -84,4 +84,4 @@ Si tienes alguna pregunta sobre estos Términos de Uso, puedes contactar al desa
 
 ---
 
-*Última actualización: {lastUpdated}*
+*Última actualización: 31 de Mayo de 2026*

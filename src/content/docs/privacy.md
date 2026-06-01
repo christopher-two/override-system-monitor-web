@@ -134,4 +134,4 @@ Si tienes preguntas o preocupaciones sobre esta Política de Privacidad, puedes 
 
 ---
 
-*Última actualización: {lastUpdated}*
+*Última actualización: 31 de Mayo de 2026*
